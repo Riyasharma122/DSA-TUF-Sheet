@@ -1,1 +1,2 @@
-You entered: 10
+Hello Riya
+You are 20 years old.

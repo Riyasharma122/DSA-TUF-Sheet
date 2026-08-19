@@ -1,32 +1,16 @@
-
 {
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Compile and run",
+      "label": "Run Python File",
       "type": "shell",
-      "command": "",
+      "command": "python",
       "args": [
-        "copy",
-        "\"${file}\"",
-        "${workspaceFolder}\\jspwTest.cpp",
-        "&&",
-        "g++",
-        "jspwTest.cpp",
-        "-o",
-        "jspwTest",
-        "&&",
-        "jspwTest",
+        "${file}",
         "<",
         "input.txt",
         ">",
-        "output.txt",
-        "&&",
-        "del",
-        "jspwTest.exe",
-        "&&",
-        "del",
-        "jspwTest.cpp"
+        "output.txt"
       ],
       "presentation": {
         "reveal": "never"
@@ -35,21 +19,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": {
-        "owner": "cpp",
-        "fileLocation": [
-          "relative",
-          "${workspaceRoot}"
-        ],
-        "pattern": {
-          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-          "file": 1,
-          "line": 2,
-          "column": 3,
-          "severity": 4,
-          "message": 5
-        }
-      }
+      "problemMatcher": []
     }
   ]
 }

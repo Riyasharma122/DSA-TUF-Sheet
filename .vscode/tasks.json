@@ -1,25 +1,19 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Run Python File",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "${file}",
-        "<",
-        "input.txt",
-        ">",
-        "output.txt"
-      ],
-      "presentation": {
-        "reveal": "never"
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run C++ with Input/Output",
+            "type": "shell",
+            "command": "g++ -std=c++17 \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && cmd /c \"\\\"${fileDirname}\\${fileBasenameNoExtension}.exe\\\" < \\\"${workspaceFolder}\\input.txt\\\" > \\\"${workspaceFolder}\\output.txt\\\"\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
 }
